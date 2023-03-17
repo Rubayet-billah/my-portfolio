@@ -4,7 +4,7 @@ import Header from "./Shared/Header/Header";
 
 function App() {
   return (
-    <div>
+    <div className="font-montserrat">
       <Header />
     </div>
   );
