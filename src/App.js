@@ -5,7 +5,7 @@ import Banner from "./Pages/Home/Banner/Banner";
 
 function App() {
   return (
-    <div className="font-montserrat">
+    <div data-theme="black" className="font-montserrat">
       <Header />
       <main className="max-w-7xl mx-auto">
         <Banner />
