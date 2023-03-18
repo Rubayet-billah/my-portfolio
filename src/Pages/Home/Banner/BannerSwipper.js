@@ -8,6 +8,7 @@ import image3 from "../../../Images/img3.jpg";
 import image4 from "../../../Images/img4.jpg";
 import image5 from "../../../Images/img5.jpg";
 import image6 from "../../../Images/img6.jpg";
+import image7 from "../../../Images/img7.png";
 
 const BannerSwipper = () => {
   const bannerImages = [
@@ -35,6 +36,10 @@ const BannerSwipper = () => {
       id: 6,
       image: image6,
     },
+    {
+      id: 7,
+      image: image7,
+    },
   ];
 
   return (
@@ -45,7 +50,7 @@ const BannerSwipper = () => {
       autoplay={{ delay: 1500 }}
       grabCursor={true}
       modules={[Autoplay]}
-      className="mySwiper max-w-lg"
+      className="mySwiper max-w-md"
     >
       {bannerImages?.map((img) => (
         <SwiperSlide key={img.id}>
