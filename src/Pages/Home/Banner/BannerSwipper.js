@@ -49,21 +49,26 @@ const BannerSwipper = () => {
   ];
 
   return (
-    <Swiper
-      spaceBetween={0}
-      loop={true}
-      slidesPerView={1}
-      autoplay={{ delay: 1500 }}
-      grabCursor={true}
-      modules={[Autoplay]}
-      className="mySwiper max-w-md rounded-full border-[16px] border-blue-400"
-    >
-      {bannerImages?.map((img) => (
-        <SwiperSlide key={img.id}>
-          <img className="w-full rounded-full" src={img.image} alt="" />
-        </SwiperSlide>
-      ))}
-    </Swiper>
+    <div>
+      <div className="max-w-md rounded-full box glowing">
+        <img className="w-full rounded-full" src={image1} alt="" />
+        {/* <Swiper
+          spaceBetween={0}
+          loop={true}
+          slidesPerView={1}
+          autoplay={{ delay: 1500 }}
+          grabCursor={true}
+          modules={[Autoplay]}
+          className="mySwiper max-w-md rounded-full box glowing"
+        >
+          {bannerImages?.map((img) => (
+            <SwiperSlide key={img.id}>
+              <img className="w-full rounded-full" src={img.image} alt="" />
+            </SwiperSlide>
+          ))}
+        </Swiper> */}
+      </div>
+    </div>
   );
 };
 
