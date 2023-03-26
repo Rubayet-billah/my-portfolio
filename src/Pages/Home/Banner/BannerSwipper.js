@@ -56,7 +56,7 @@ const BannerSwipper = () => {
       autoplay={{ delay: 1500 }}
       grabCursor={true}
       modules={[Autoplay]}
-      className="mySwiper max-w-md rounded-full border-[16px] border-blue-400 glowing-border "
+      className="mySwiper max-w-md rounded-full border-[16px] border-blue-400"
     >
       {bannerImages?.map((img) => (
         <SwiperSlide key={img.id}>
