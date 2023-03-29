@@ -12,7 +12,6 @@ import profileImg from "../../../Images/profile.png";
 // import image6 from "../../../Images/img6.jpg";
 // import image7 from "../../../Images/img7.png";
 // import image8 from "../../../Images/img8.png";
-// import image8 from "../../../Images/img8.png";
 
 const BannerSwipper = () => {
   // const bannerImages = [
