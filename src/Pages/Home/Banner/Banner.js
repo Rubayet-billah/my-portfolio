@@ -7,7 +7,7 @@ const Banner = () => {
     <section className="grid lg:grid-cols-2 lg:gap-x-48 place-items-center mt-12 min-h-[70vh]">
       <div>
         <h1 className="lg:text-6xl lg:mb-4">
-          Hi, I'm <span className="font-bold text-blue-600">Rubayet</span>
+          Hi, I'm <span className="font-bold text-teal-400">Rubayet</span>
         </h1>
         <h2 className="lg:text-4xl lg:mb-4">A web developer and good at</h2>
         <h1 className="font-bold lg:text-7xl">
