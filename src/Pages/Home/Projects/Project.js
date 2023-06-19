@@ -1,44 +1,50 @@
 import React from "react";
 import "./Project.css";
+import { motion } from "framer-motion";
 
-const Project = () => {
+const Project = ({ project }) => {
+  const { image, name, details, ratings } = project;
   return (
-    <div className="wrapper bg-gray-900 rounded-lg antialiased text-gray-900 p-6 m-8 lg:m-0">
+    <div className="wrapper bg-teal-200 rounded-lg antialiased text-gray-900 p-6 m-8 lg:m-0 shadow-teal-100 shadow-lg">
       <div>
         <img
-          src="https://source.unsplash.com/random/350x350"
+          src={image}
           alt="randomImage"
           className="w-full object-cover object-center rounded-lg shadow-md"
         />
 
         <div className="relative px-4 -mt-16">
-          <div className="bg-white p-6 rounded-lg shadow-lg">
+          <motion.div
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.8 }}
+            className="bg-white p-6 rounded-lg shadow-lg"
+          >
             <div className="flex items-baseline">
               <span className="bg-teal-200 text-teal-800 text-xs px-2 inline-block rounded-full uppercase font-semibold tracking-wide">
-                New
+                Live
               </span>
-              <div className="ml-2 text-gray-600 uppercase text-xs font-semibold tracking-wider">
-                2 baths &bull; 3 rooms
-              </div>
+              <span className="bg-blue-200 text-teal-800 text-xs px-2 inline-block rounded-full uppercase font-semibold tracking-wide ml-1">
+                Code
+              </span>
+              <span className="bg-green-200 text-teal-800 text-xs px-2 inline-block rounded-full uppercase font-semibold tracking-wide ml-1">
+                Details
+              </span>
             </div>
 
             <h4 className="mt-1 text-xl font-semibold uppercase leading-tight truncate">
-              A random Title
+              {name}
             </h4>
 
-            <div className="mt-1">
-              $1800
-              <span className="text-gray-600 text-sm"> /wk</span>
-            </div>
+            <div className="mt-1">{details}</div>
             <div className="mt-4">
               <span className="text-teal-600 text-md font-semibold">
-                4/5 ratings
+                {ratings}/5 ratings
               </span>
               <span className="text-sm text-gray-600">
-                (based on 234 ratings)
+                (based on N/A ratings)
               </span>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>
