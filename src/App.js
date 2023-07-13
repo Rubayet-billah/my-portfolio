@@ -5,7 +5,13 @@ import Projects from "./Pages/Home/Projects/Projects";
 
 function App() {
   return (
-    <div data-theme="black" className="font-montserrat min-h-screen">
+    <div
+      className="font-montserrat min-h-screen  bg-gradient-to-r
+    from-gray-900
+    via-black
+    to-slate-900
+    background-animate text-white"
+    >
       <Header />
       <main className="max-w-7xl mx-auto py-24">
         <Banner />

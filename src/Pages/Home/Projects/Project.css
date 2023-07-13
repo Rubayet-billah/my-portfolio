@@ -1,5 +1,8 @@
-/* .wrapper {
+/* .project-title {
+  width: 384px;
   display: grid;
-  height: 100vh;
   place-items: center;
+  position: absolute;
+  top: 40%;
+  right: -50%;
 } */
