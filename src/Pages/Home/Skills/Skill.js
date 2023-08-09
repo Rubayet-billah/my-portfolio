@@ -12,7 +12,10 @@ const Skill = ({ skill }) => {
     <div>
       <p className="text-xl md:text-2xl font-bold uppercase mb-2">{name}</p>
       <div className="w-full bg-slate-500 rounded-full">
-        <div className="h-full rounded-full text-center" style={progressStyle}>
+        <div
+          className="h-full font-bold rounded-full text-center drop-shadow-md shadow-black"
+          style={progressStyle}
+        >
           {progress}%
         </div>
       </div>

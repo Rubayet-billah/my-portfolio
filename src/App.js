@@ -3,6 +3,7 @@ import Header from "./Shared/Header/Header";
 import Banner from "./Pages/Home/Banner/Banner";
 import Projects from "./Pages/Home/Projects/Projects";
 import Skills from "./Pages/Home/Skills/Skills";
+import ProjectDetails from "./Pages/Home/Projects/ProjectDetails";
 
 function App() {
   return (
@@ -15,9 +16,10 @@ function App() {
     >
       <Header />
       <main className="max-w-7xl mx-auto py-24">
-        <Banner />
+        {/* <Banner />
         <Projects />
-        <Skills />
+        <Skills /> */}
+        <ProjectDetails />
       </main>
     </div>
   );
