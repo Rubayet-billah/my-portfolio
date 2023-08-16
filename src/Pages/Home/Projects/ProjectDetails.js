@@ -21,8 +21,8 @@ const ProjectDetails = () => {
   ];
 
   const [activeImageIndex, setActiveImageIndex] = useState(0);
-  const activeImageFeatures =
-    features[activeImageIndex]?.keyFeatures.split(".");
+  const activeFeature = features[activeImageIndex];
+  const activeImageFeatures = activeFeature?.keyFeatures.split(".");
   const [shouldAnimate, setShouldAnimate] = useState(false);
 
   const handleImageChange = (newIndex) => {
@@ -34,32 +34,37 @@ const ProjectDetails = () => {
     if (shouldAnimate) {
       const timeout = setTimeout(() => {
         setShouldAnimate(false);
-      }, 400); // Duration of the animation in milliseconds
+      }, 400);
 
       return () => clearTimeout(timeout);
     }
   }, [shouldAnimate]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      handleImageChange((activeImageIndex + 1) % features.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [activeImageIndex]);
+
   return (
     <div>
       <h1 className="text-2xl md:text-5xl font-bold">Staff Deck</h1>
       <h3 className="md:text-xl">Complete HR management solution</h3>
       <section className="grid md:grid-cols-2 gap-12 mt-5 md:mt-8">
         <div className="carousel w-full">
-          {features.map((ftr, idx) => (
+          {features.map((feature, idx) => (
             <div
               key={idx}
-              id={`slide${idx}`}
               className={`carousel-item relative w-full ${
                 idx === activeImageIndex ? "block" : "hidden"
               }`}
             >
-              <img src={ftr.image} className="w-full" alt={`img-${idx}`} />
+              <img src={feature.image} className="w-full" alt={`img-${idx}`} />
               <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                <a
-                  href={`#slide${
-                    (idx - 1 + features.length) % features.length
-                  }`}
-                  className="btn btn-circle btn-outline"
+                <button
+                  className="btn btn-circle"
                   onClick={() =>
                     handleImageChange(
                       (idx - 1 + features.length) % features.length
@@ -67,33 +72,26 @@ const ProjectDetails = () => {
                   }
                 >
                   ❮
-                </a>
-                <a
-                  href={`#slide${(idx + 1) % features.length}`}
-                  className="btn btn-circle btn-outline"
+                </button>
+                <button
+                  className="btn btn-circle"
                   onClick={() => handleImageChange((idx + 1) % features.length)}
                 >
                   ❯
-                </a>
+                </button>
               </div>
             </div>
           ))}
         </div>
         <div>
           <h2 className="text-xl md:text-3xl font-bold mb-5">Key Features</h2>
-          <div>
-            {activeImageFeatures?.map(
-              (feature, index) =>
-                feature?.length > 0 && (
-                  <li
-                    className={` ${shouldAnimate ? "fade-left" : ""}`}
-                    key={index}
-                  >
-                    {feature}
-                  </li>
-                )
-            )}
-          </div>
+          <ul>
+            {activeImageFeatures?.map((feature, index) => (
+              <li className={shouldAnimate ? "fade-left" : ""} key={index}>
+                {feature}
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
     </div>
