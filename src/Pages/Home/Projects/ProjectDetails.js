@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import "./ProjectDetails.css";
 
 const ProjectDetails = () => {
   const features = [
@@ -22,11 +23,22 @@ const ProjectDetails = () => {
   const [activeImageIndex, setActiveImageIndex] = useState(0);
   const activeImageFeatures =
     features[activeImageIndex]?.keyFeatures.split(".");
+  const [shouldAnimate, setShouldAnimate] = useState(false);
 
   const handleImageChange = (newIndex) => {
     setActiveImageIndex(newIndex);
+    setShouldAnimate(true);
   };
 
+  useEffect(() => {
+    if (shouldAnimate) {
+      const timeout = setTimeout(() => {
+        setShouldAnimate(false);
+      }, 400); // Duration of the animation in milliseconds
+
+      return () => clearTimeout(timeout);
+    }
+  }, [shouldAnimate]);
   return (
     <div>
       <h1 className="text-2xl md:text-5xl font-bold">Staff Deck</h1>
@@ -72,7 +84,14 @@ const ProjectDetails = () => {
           <div>
             {activeImageFeatures?.map(
               (feature, index) =>
-                feature?.length > 0 && <li key={index}>{feature}</li>
+                feature?.length > 0 && (
+                  <li
+                    className={` ${shouldAnimate ? "fade-left" : ""}`}
+                    key={index}
+                  >
+                    {feature}
+                  </li>
+                )
             )}
           </div>
         </div>
