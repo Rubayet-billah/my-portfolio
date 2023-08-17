@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const ReviewInputForm = ({ onSubmit }) => {
-  const [rating, setRating] = useState(0);
+  const [rating, setRating] = useState(5);
   const [comment, setComment] = useState("");
 
   const handleSubmit = (e) => {
@@ -17,7 +17,7 @@ const ReviewInputForm = ({ onSubmit }) => {
     <form onSubmit={handleSubmit} className="rounded-lg shadow-md mt-5 md:mt-8">
       <h2 className="text-xl font-semibold mb-4">Leave a Review</h2>
       <div className="mb-4">
-        <label className="block font-medium">Rating:</label>
+        <label className="block font-medium">Rate:</label>
         <div className="flex items-center">
           {[1, 2, 3, 4, 5].map((value) => (
             <button
@@ -39,7 +39,7 @@ const ReviewInputForm = ({ onSubmit }) => {
           value={comment}
           onChange={(e) => setComment(e.target.value)}
           className="border rounded-md px-3 py-2 w-full"
-          rows="4"
+          rows="2"
           required
         />
       </div>
