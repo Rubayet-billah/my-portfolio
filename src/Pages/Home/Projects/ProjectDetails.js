@@ -1,5 +1,9 @@
 import React, { useEffect, useState } from "react";
+import { BsStarFill } from "react-icons/bs";
+import { CiShare1 } from "react-icons/ci";
 import "./ProjectDetails.css";
+import ReviewInputForm from "../../../components/ReviewInputForm";
+import UserReview from "../../../components/UserReview";
 
 const ProjectDetails = () => {
   const features = [
@@ -61,7 +65,13 @@ const ProjectDetails = () => {
                 idx === activeImageIndex ? "block" : "hidden"
               }`}
             >
-              <img src={feature.image} className="w-full" alt={`img-${idx}`} />
+              <div className="border-8 ">
+                <img
+                  src={feature.image}
+                  className="w-full"
+                  alt={`img-${idx}`}
+                />
+              </div>
               <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                 <button
                   className="btn btn-circle"
@@ -94,6 +104,34 @@ const ProjectDetails = () => {
           </ul>
         </div>
       </section>
+      <div className="my-5 md:my-12">
+        <h2 className="text-xl md:text-3xl font-bold mb-5 capitalize">
+          About The Software
+        </h2>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab ipsa
+          quaerat culpa soluta veritatis sed doloremque, ratione explicabo
+          temporibus delectus mollitia aliquam recusandae illo provident. Quam
+          impedit possimus quaerat incidunt placeat, corporis ullam dolor magnam
+          et ipsa fuga debitis voluptatibus unde? Dolores repellat excepturi
+          necessitatibus facere recusandae natus quasi quos et nihil repellendus
+          officiis deserunt porro illo, unde labore sequi voluptates. Accusamus
+          assumenda minima nulla quos illo autem praesentium. Inventore ut fugit
+          aperiam eaque ex illum consequatur dolorem saepe distinctio eveniet
+          sed, at quibusdam fugiat nemo. Dolorum quod doloribus rerum corrupti
+          molestiae assumenda asperiores consequuntur, vel temporibus, iure qui
+          provident?
+        </p>
+      </div>
+      <div>
+        <h2 className="text-xl md:text-3xl font-bold mb-5 capitalize">
+          User Review
+        </h2>
+        <div>
+          <UserReview />
+        </div>
+        <ReviewInputForm />
+      </div>
     </div>
   );
 };
