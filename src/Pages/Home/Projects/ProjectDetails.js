@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { BsStarFill } from "react-icons/bs";
+import { BsGithub, BsGlobeAsiaAustralia } from "react-icons/bs";
 import { CiShare1 } from "react-icons/ci";
 import "./ProjectDetails.css";
 import ReviewInputForm from "../../../components/ReviewInputForm";
@@ -54,8 +54,35 @@ const ProjectDetails = () => {
 
   return (
     <div>
-      <h1 className="text-2xl md:text-5xl font-bold">Staff Deck</h1>
-      <h3 className="md:text-xl">Complete HR management solution</h3>
+      <section className="md:flex justify-between">
+        <div className="md:w-1/2 md:pr-12">
+          <h1 className="text-2xl md:text-5xl font-bold mb-2">Staff Deck</h1>
+          <h3 className="text-xl md:text-2xl text-gray-200">
+            Complete HR management solution
+          </h3>
+        </div>
+        <div className="mt-4 md:mt-0 md:w-1/2 md:flex md:justify-end">
+          <a
+            href="https://github.com/yourusername/yourrepository"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-circle btn-outline text-xl md:text-2xl mr-2 md:mr-4 relative"
+          >
+            <BsGithub />
+            <span className="tooltip">GitHub Code Link</span>
+          </a>
+          <a
+            href="https://www.yourwebsite.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-circle btn-outline text-xl md:text-2xl relative"
+          >
+            <BsGlobeAsiaAustralia />
+            <span className="tooltip">Live Website Link</span>
+          </a>
+        </div>
+      </section>
+
       <section className="grid md:grid-cols-2 gap-12 mt-5 md:mt-8">
         <div className="carousel w-full">
           {features.map((feature, idx) => (
