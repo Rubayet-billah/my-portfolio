@@ -33,11 +33,6 @@ const Banner = () => {
         </h1>
       </div>
       <div>
-        {/* <img
-          className="w-full rounded-lg"
-          src="https://images.unsplash.com/photo-1585079542156-2755d9c8a094?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fHByb2dyYW1taW5nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
-          alt=""
-        /> */}
         <BannerSwipper />
       </div>
     </section>
