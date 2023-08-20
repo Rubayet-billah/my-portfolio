@@ -92,10 +92,10 @@ const ProjectDetails = () => {
                 idx === activeImageIndex ? "block" : "hidden"
               }`}
             >
-              <div className="border-8 ">
+              <div className="border-8 rounded">
                 <img
                   src={feature.image}
-                  className="w-full"
+                  className="w-full rounded"
                   alt={`img-${idx}`}
                 />
               </div>
@@ -150,7 +150,7 @@ const ProjectDetails = () => {
           provident?
         </p>
       </div>
-      <div>
+      <div className="bg-zinc-800 p-2 md:p-8 rounded">
         <h2 className="text-xl md:text-3xl font-bold mb-5 capitalize">
           User Review
         </h2>

@@ -24,13 +24,16 @@ const ProjectCopy = ({ project, index }) => {
         />
       </figure>
       <div className="card-body px-0">
-        <h2
-          data-aos={indexSign === 1 ? "fade-right" : "fade-left"}
-          className="animate-text bg-gradient-to-r from-teal-500 via-white to-[#00deff] bg-clip-text text-transparent project-title text-2xl md:text-5xl uppercase font-bold w-3/4 md:w-full shadow-md"
-          style={projectTitleStyle}
-        >
-          {name}
-        </h2>
+        <div>
+          <h2
+            data-aos={indexSign === 1 ? "fade-right" : "fade-left"}
+            className="animate-text bg-gradient-to-r from-teal-500 via-white to-[#00deff] bg-clip-text text-transparent project-title text-2xl md:text-5xl uppercase font-bold w-3/4 md:w-full shadow-md"
+            style={projectTitleStyle}
+          >
+            {name}
+          </h2>
+          <button>More ={">"}</button>
+        </div>
         <p className="text-xl">{details}</p>
       </div>
     </div>
