@@ -55,14 +55,14 @@ const About = () => {
                   <FiMail className="text-teal-300 mr-2" />
                   <div>
                     <h3 className="font-bold text-teal-300 uppercase">Email</h3>
-                    <p>your.email@example.com</p>
+                    <p>rubayetbillah909@gmail.com</p>
                   </div>
                 </div>
                 <div className="flex items-center">
                   <FiPhone className="text-teal-300 mr-2" />
                   <div>
                     <h3 className="font-bold text-teal-300 uppercase">Phone</h3>
-                    <p>(123) 456-7890</p>
+                    <p>+8801875685814</p>
                   </div>
                 </div>
                 <div className="flex items-center">
@@ -73,12 +73,12 @@ const About = () => {
                     </h3>
                     <p>
                       <a
-                        href="https://www.linkedin.com/in/yourusername"
+                        href="https://www.linkedin.com/in/rubayet-billah/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-blue-500 hover:underline"
                       >
-                        linkedin.com/in/yourusername
+                        linkedin.com/in/rubayet-billah
                       </a>
                     </p>
                   </div>
@@ -91,7 +91,7 @@ const About = () => {
                     </h3>
                     <p>Bachelor's in Physics</p>
                     <p>BSMR Science and Technology University</p>
-                    <p>Graduated: Currently Studying</p>
+                    <p>Graduated: N/A</p>
                   </div>
                 </div>
               </section>
