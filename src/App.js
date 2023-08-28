@@ -25,8 +25,9 @@ main-background
       <main className="max-w-7xl mx-auto px-4 lg:px-0 py-24">
         {/* <Banner /> */}
         {/* <Projects /> */}
-        {/* <Skills /> */}
-        <ProjectDetails />
+        <Skills />
+        {/* <ProjectDetails /> */}
+
         {/* <NameSum /> */}
       </main>
     </div>

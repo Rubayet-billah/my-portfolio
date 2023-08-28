@@ -1,22 +1,24 @@
 import React from "react";
+import "./Skill.css";
 
 const Skill = ({ skill }) => {
   const { name, progress, color } = skill;
-
-  const progressStyle = {
-    width: `${progress}%`,
-    background: color ? color : "green", // Use the provided color prop or default to green if not provided
-  };
-
   return (
     <div>
-      <p className="text-xl md:text-2xl font-bold uppercase mb-2">{name}</p>
-      <div className="w-full bg-slate-500 rounded-full">
+      <div class="skill-box max-w-xs p-8 md:py-16 mx-auto">
+        <p className="text-xl md:text-3xl font-bold uppercase">{name}</p>
         <div
-          className="h-full font-bold rounded-full text-center drop-shadow-md shadow-black"
-          style={progressStyle}
+          className={`radial-progress my-5`}
+          style={{
+            "--value": progress,
+            "--size": "10rem",
+            "--thickness": "12px",
+            color,
+          }}
         >
-          {progress}%
+          <span className="text-white text-xl md:text-3xl font-bold">
+            {progress}%
+          </span>
         </div>
       </div>
     </div>

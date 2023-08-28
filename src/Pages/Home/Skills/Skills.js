@@ -8,7 +8,7 @@ const Skills = () => {
     { name: "Javascript", progress: 80, color: "#F7DF1E" }, // Yellow color for Javascript
     { name: "React JS", progress: 90, color: "#61DAFB" }, // Light blue color for React JS
     { name: "Node JS", progress: 80, color: "#68A063" }, // Green color for Node JS
-    { name: "Express JS", progress: 80, color: "#000000" }, // Black color for Express JS
+    { name: "Express JS", progress: 80, color: "#fdfdfd" }, // Black color for Express JS
     { name: "MongoDB", progress: 80, color: "#4DB33D" }, // Green color for MongoDB
     { name: "Redux", progress: 95, color: "#764ABC" }, // Purple color for Redux
     { name: "TailwindCSS", progress: 90, color: "#38B2AC" }, // Teal color for TailwindCSS
@@ -32,7 +32,7 @@ const Skills = () => {
           Skills
         </h1>
       </div>
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-12">
+      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
         {skills?.map((skill, idx) => (
           <Skill key={idx} skill={skill} />
         ))}
