@@ -7,6 +7,7 @@ import ProjectDetails from "./Pages/Home/Projects/ProjectDetails";
 import NameSum from "./components/NameSum";
 import About from "./Pages/Home/About/About";
 import Contact from "./Pages/Home/Contact/Contact";
+import Blogs from "./Pages/Blogs/Blogs";
 
 function App() {
   return (
@@ -30,7 +31,8 @@ main-background
         {/* <Skills /> */}
         {/* <ProjectDetails /> */}
         {/* <About /> */}
-        <Contact />
+        {/* <Contact /> */}
+        <Blogs />
         {/* <NameSum /> */}
       </main>
     </div>
