@@ -5,6 +5,7 @@ import Projects from "./Pages/Home/Projects/Projects";
 import Skills from "./Pages/Home/Skills/Skills";
 import ProjectDetails from "./Pages/Home/Projects/ProjectDetails";
 import NameSum from "./components/NameSum";
+import About from "./Pages/Home/About/About";
 
 function App() {
   return (
@@ -25,9 +26,9 @@ main-background
       <main className="max-w-7xl mx-auto px-4 lg:px-0 py-24">
         {/* <Banner /> */}
         {/* <Projects /> */}
-        <Skills />
+        {/* <Skills /> */}
         {/* <ProjectDetails /> */}
-
+        <About />
         {/* <NameSum /> */}
       </main>
     </div>
